@@ -1,9 +1,9 @@
 <div align="center">
 
-![Airil Asyraff Zulkifli Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:00F0FF,50:7C3AED,100:EC4899&height=180&section=header)
+![Airil Asyraff Zulkifli Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:D97706,40:F59E0B,80:FBBF24,100:FEF08A&height=180&section=header)
 
 <a href="https://github.com/airilakio29">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2600&pause=1200&color=00F0FF&center=true&vCenter=true&repeat=true&width=620&height=45&lines=Airil+Asyraff+Zulkifli;Software+Developer+%7C+Cloud+Enthusiast;Seeking+Software+%26+Cloud+Internship" alt="Airil Asyraff Zulkifli - Software Developer | Cloud Enthusiast" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2600&pause=1200&color=FACC15&center=true&vCenter=true&repeat=true&width=620&height=45&lines=Airil+Asyraff+Zulkifli;Software+Developer+%7C+Cloud+Enthusiast;Seeking+Software+%26+Cloud+Internship" alt="Airil Asyraff Zulkifli - Software Developer | Cloud Enthusiast" />
 </a>
 
 **Full-Stack Development · Cloud Fundamentals · System Utilities**
