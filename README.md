@@ -30,7 +30,7 @@ I am a 2nd-year **Information Technology** student at **Universiti Teknologi PET
 
 ## 🏆 Selected Work
 
-### 🌟 [KiroKash — Student Financial Tracker](https://github.com/airilakio29/KiroKash) `Flagship`
+### 🌟 [KAMPUSKash : Student Financial Tracker](https://github.com/airilakio29/KiroKash) `Flagship`
 > A modern student personal finance management platform designed to track multi-account balances, daily campus expenses, category budgets, and savings goals in Ringgit Malaysia (RM) with real-time cloud synchronization. Began as 1st place hackathon winner KampusKash, continuously developed into a comprehensive finance tool.
 >
 > [![React](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
@@ -41,7 +41,7 @@ I am a 2nd-year **Information Technology** student at **Universiti Teknologi PET
 
 ---
 
-### 🛡️ [Terra Guard — National Disaster Utility](https://github.com/airilakio29/Terra-Guard) `Hackathon Finalist`
+### 🛡️ [Terra Guard : National Disaster Utility](https://github.com/airilakio29/Terra-Guard) `Hackathon Finalist`
 > A tactical disaster monitoring platform delivering real-time hazard mapping (active fire hotspots, weather radar, sensor grids), full bilingual (BM/BI) accessibility, and automated Situation Reports (SITREPs) synthesized by Gemini AI for emergency responders and citizens.
 >
 > [![React](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
@@ -54,7 +54,7 @@ I am a 2nd-year **Information Technology** student at **Universiti Teknologi PET
 
 ---
 
-### 🏨 [Hotelier — Hotel Management System](https://github.com/airilakio29/Hotelier)
+### 🏨 [Hotelier : Hotel Management System](https://github.com/airilakio29/Hotelier)
 > A full-featured hotel operations and reservation platform providing digital guest bookings, automated facility add-on invoicing, staff shift scheduling, and an interactive color-coded live room status workspace. Deployed serverless on Vercel with community PHP runtime and cloud MySQL architecture.
 >
 > [![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net/)
