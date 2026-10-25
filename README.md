@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Airil Asyraff Zulkifli - Software Developer / Cloud Practitioner" width="100%" />
+<img src="assets/banner.svg" alt="Decorative cyberpunk banner" width="100%" />
 
 <br/><br/>
 

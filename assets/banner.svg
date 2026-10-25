@@ -1,132 +1,153 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="100%" height="100%">
   <defs>
     <!-- Dark Navy Background Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05080F" />
-      <stop offset="40%" stop-color="#070B14" />
-      <stop offset="80%" stop-color="#0B1020" />
-      <stop offset="100%" stop-color="#060913" />
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#04060A" />
+      <stop offset="45%" stop-color="#070B14" />
+      <stop offset="75%" stop-color="#0B1020" />
+      <stop offset="100%" stop-color="#090D1A" />
     </linearGradient>
 
-    <radialGradient id="centerGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0.22" />
-      <stop offset="45%" stop-color="#00F0FF" stop-opacity="0.10" />
+    <!-- Center Atmospheric Horizon Glow -->
+    <radialGradient id="horizonGlow" cx="50%" cy="62%" r="55%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.32" />
+      <stop offset="25%" stop-color="#7B2FF7" stop-opacity="0.24" />
+      <stop offset="60%" stop-color="#0B1020" stop-opacity="0.08" />
       <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Neon Light Streaks Gradients -->
-    <linearGradient id="cyanStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+    <radialGradient id="upperVioletGlow" cx="50%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Laser Horizon Line Gradients -->
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
-      <stop offset="30%" stop-color="#00F0FF" stop-opacity="0.8" />
-      <stop offset="70%" stop-color="#7B2FF7" stop-opacity="0.9" />
+      <stop offset="20%" stop-color="#00F0FF" stop-opacity="0.6" />
+      <stop offset="45%" stop-color="#FCEE0A" stop-opacity="0.9" />
+      <stop offset="55%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#7B2FF7" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="yellowStreak" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FCEE0A" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FCEE0A" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Grid Floor Perspective Fade -->
-    <linearGradient id="gridFade" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="movingStreakGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
-      <stop offset="35%" stop-color="#00F0FF" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.32" />
+      <stop offset="40%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#FCEE0A" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="violetGridFade" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0" />
-      <stop offset="40%" stop-color="#7B2FF7" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0.35" />
+    <!-- Perspective Grid Line Gradients -->
+    <linearGradient id="gridVGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.05" />
+      <stop offset="30%" stop-color="#00F0FF" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.45" />
     </linearGradient>
 
-    <!-- Scanline Pattern -->
-    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.3" />
+    <linearGradient id="gridVioletGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0.05" />
+      <stop offset="40%" stop-color="#7B2FF7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Skyline Structure Gradients -->
+    <linearGradient id="towerGradFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#070B14" />
+    </linearGradient>
+
+    <linearGradient id="towerGradMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D1527" />
+      <stop offset="100%" stop-color="#050912" />
+    </linearGradient>
+
+    <linearGradient id="towerGradNear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A111F" />
+      <stop offset="100%" stop-color="#04060C" />
+    </linearGradient>
+
+    <!-- Scanline Texture -->
+    <pattern id="subtleScanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.26" />
     </pattern>
 
-    <!-- Fine Tech Matrix Grid Pattern -->
-    <pattern id="techGrid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.07" />
-    </pattern>
-
-    <!-- Filters for Neon Glow -->
-    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3.5" result="blur" />
+    <!-- Glow Filter -->
+    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <filter id="titleGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur1" />
-      <feGaussianBlur stdDeviation="10" result="blur2" />
+    <filter id="wideHaze" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feMerge>
-        <feMergeNode in="blur2" />
-        <feMergeNode in="blur1" />
+        <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
     <style>
       <![CDATA[
-      /* Font and Typography Settings */
-      .font-mono {
-        font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      }
-      .font-sans {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      @keyframes pulse-horizon {
+        0%, 100% { opacity: 0.75; transform: scaleY(1); }
+        50% { opacity: 1; transform: scaleY(1.15); }
       }
 
-      /* Glow & Pulse Animation */
-      @keyframes pulse-glow {
-        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.45)); }
-        50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 24px rgba(123, 47, 247, 0.5)); }
-      }
-
-      /* Subtle Cyberpunk Flicker */
-      @keyframes text-flicker {
-        0%, 93%, 95%, 100% { opacity: 1; }
-        94% { opacity: 0.82; transform: skewX(0.4deg); }
-        97% { opacity: 0.92; }
-      }
-
-      /* Moving Horizontal Light Beam */
-      @keyframes streak-slide {
+      @keyframes light-streak-run {
         0% { transform: translateX(-1280px); }
         100% { transform: translateX(1280px); }
       }
 
-      /* Beacon Blinking */
-      @keyframes beacon {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 1; }
+      @keyframes particle-drift-1 {
+        0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.35; }
+        50% { transform: translateY(-7px) translateX(5px); opacity: 0.85; }
       }
 
-      .animated-glow {
-        animation: pulse-glow 4s ease-in-out infinite;
+      @keyframes particle-drift-2 {
+        0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.5; }
+        50% { transform: translateY(-10px) translateX(-6px); opacity: 0.95; }
       }
 
-      .animated-flicker {
-        animation: text-flicker 7s infinite;
+      @keyframes beacon-blink {
+        0%, 100% { opacity: 0.25; }
+        45%, 55% { opacity: 1; }
       }
 
-      .animated-streak {
-        animation: streak-slide 6s linear infinite;
+      .pulse-layer {
+        animation: pulse-horizon 5s ease-in-out infinite;
+        transform-origin: 640px 198px;
       }
 
-      .animated-beacon {
-        animation: beacon 2s infinite ease-in-out;
+      .streak-anim {
+        animation: light-streak-run 7s linear infinite;
       }
 
-      /* Accessibility: Prefers Reduced Motion */
+      .particle-group-1 {
+        animation: particle-drift-1 6s ease-in-out infinite;
+      }
+
+      .particle-group-2 {
+        animation: particle-drift-2 8s ease-in-out infinite;
+      }
+
+      .beacon-1 {
+        animation: beacon-blink 2.2s infinite ease-in-out;
+      }
+
+      .beacon-2 {
+        animation: beacon-blink 3.1s infinite ease-in-out;
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .animated-glow,
-        .animated-flicker,
-        .animated-streak,
-        .animated-beacon {
+        .pulse-layer,
+        .streak-anim,
+        .particle-group-1,
+        .particle-group-2,
+        .beacon-1,
+        .beacon-2 {
           animation: none !important;
           opacity: 1 !important;
           transform: none !important;
@@ -137,166 +158,202 @@
   </defs>
 
   <!-- SOLID NAVY BACKGROUND -->
-  <rect width="1280" height="320" fill="url(#bgGrad)" />
+  <rect width="1280" height="320" fill="url(#skyGrad)" />
 
-  <!-- Center Radial Glow -->
-  <rect width="1280" height="320" fill="url(#centerGlow)" />
+  <!-- Upper Atmosphere Violet Nebula -->
+  <rect width="1280" height="320" fill="url(#upperVioletGlow)" />
 
-  <!-- Fine Tech Grid Texture -->
-  <rect width="1280" height="320" fill="url(#techGrid)" />
+  <!-- ================= SILHOUETTE CYBERPUNK SKYLINE ================= -->
+  <!-- Layer 1: Distant Abstract Towers (Deep Silhouette) -->
+  <g opacity="0.6">
+    <!-- Far Left Clusters -->
+    <polygon points="60,200 60,110 75,95 100,95 115,110 115,200" fill="url(#towerGradFar)" stroke="#7B2FF7" stroke-width="0.5" stroke-opacity="0.3" />
+    <polygon points="125,200 125,130 140,115 170,115 170,200" fill="url(#towerGradFar)" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.25" />
+    <line x1="88" y1="95" x2="88" y2="70" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="88" cy="68" r="1.5" fill="#00F0FF" class="beacon-1" />
 
-  <!-- ================= PERSPECTIVE 3D NEON GRID FLOOR ================= -->
-  <g opacity="0.85">
-    <!-- Horizontal Perspective Lines (Progressive Spacing) -->
-    <line x1="0" y1="210" x2="1280" y2="210" stroke="url(#gridFade)" stroke-width="0.75" />
-    <line x1="0" y1="225" x2="1280" y2="225" stroke="url(#gridFade)" stroke-width="0.9" />
-    <line x1="0" y1="244" x2="1280" y2="244" stroke="url(#gridFade)" stroke-width="1.1" />
-    <line x1="0" y1="268" x2="1280" y2="268" stroke="url(#gridFade)" stroke-width="1.3" />
-    <line x1="0" y1="298" x2="1280" y2="298" stroke="url(#gridFade)" stroke-width="1.6" />
+    <!-- Left Flank Angular Towers -->
+    <polygon points="190,200 190,140 210,120 235,120 250,135 250,200" fill="url(#towerGradFar)" />
+    <polygon points="270,200 270,105 290,85 315,85 330,100 330,200" fill="url(#towerGradFar)" stroke="#7B2FF7" stroke-width="0.5" stroke-opacity="0.3" />
+    <line x1="302" y1="85" x2="302" y2="60" stroke="#FCEE0A" stroke-width="1" stroke-opacity="0.7" />
+    <circle cx="302" cy="58" r="1.5" fill="#FCEE0A" class="beacon-2" />
 
-    <!-- Receding Perspective Vertical / Slanted Lines -->
-    <!-- Horizon Center: (640, 195) -->
-    <line x1="640" y1="195" x2="640" y2="320" stroke="url(#violetGridFade)" stroke-width="1.4" />
-    <line x1="640" y1="195" x2="520" y2="320" stroke="url(#gridFade)" stroke-width="1.1" />
-    <line x1="640" y1="195" x2="760" y2="320" stroke="url(#gridFade)" stroke-width="1.1" />
-    <line x1="640" y1="195" x2="380" y2="320" stroke="url(#gridFade)" stroke-width="1.2" />
-    <line x1="640" y1="195" x2="900" y2="320" stroke="url(#gridFade)" stroke-width="1.2" />
-    <line x1="640" y1="195" x2="220" y2="320" stroke="url(#violetGridFade)" stroke-width="1.3" />
-    <line x1="640" y1="195" x2="1060" y2="320" stroke="url(#violetGridFade)" stroke-width="1.3" />
-    <line x1="640" y1="195" x2="40" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
-    <line x1="640" y1="195" x2="1240" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
-    <line x1="640" y1="195" x2="-160" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
-    <line x1="640" y1="195" x2="1440" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
+    <!-- Center Left Stepped Building (Open Center Composition) -->
+    <polygon points="360,200 360,155 385,130 420,130 435,145 435,200" fill="url(#towerGradFar)" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.2" />
+
+    <!-- Center Right Stepped Building -->
+    <polygon points="845,200 845,145 860,130 895,130 920,155 920,200" fill="url(#towerGradFar)" stroke="#7B2FF7" stroke-width="0.5" stroke-opacity="0.2" />
+
+    <!-- Right Flank Angular Towers -->
+    <polygon points="950,200 950,100 965,85 990,85 1010,105 1010,200" fill="url(#towerGradFar)" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.3" />
+    <line x1="978" y1="85" x2="978" y2="62" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.7" />
+    <circle cx="978" cy="60" r="1.5" fill="#00F0FF" class="beacon-1" />
+
+    <!-- Far Right Clusters -->
+    <polygon points="1030,200 1030,135 1045,120 1070,120 1090,140 1090,200" fill="url(#towerGradFar)" />
+    <polygon points="1110,200 1110,110 1125,95 1155,95 1170,110 1170,200" fill="url(#towerGradFar)" stroke="#7B2FF7" stroke-width="0.5" stroke-opacity="0.3" />
+    <line x1="1140" y1="95" x2="1140" y2="72" stroke="#FCEE0A" stroke-width="1" stroke-opacity="0.7" />
+    <circle cx="1140" cy="70" r="1.5" fill="#FCEE0A" class="beacon-2" />
+    <polygon points="1185,200 1185,130 1205,110 1235,110 1235,200" fill="url(#towerGradFar)" />
   </g>
 
-  <!-- Horizon Neon Laser Divider Line -->
-  <line x1="40" y1="195" x2="1240" y2="195" stroke="url(#cyanStreak)" stroke-width="1.8" filter="url(#cyanGlow)" />
-  <circle cx="640" cy="195" r="3" fill="#00F0FF" />
+  <!-- Layer 2: Mid-Ground Angular Mega-structures with Neon Edge Strips & Lit Windows -->
+  <g>
+    <!-- Left Mid Structure 1 -->
+    <polygon points="80,200 80,125 100,105 150,105 165,120 165,200" fill="url(#towerGradMid)" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.4" />
+    <!-- Vertical Neon Energy Conduit Strip -->
+    <line x1="122" y1="105" x2="122" y2="198" stroke="#00F0FF" stroke-width="1.2" stroke-opacity="0.55" />
+    <!-- Lit Windows (Yellow & Cyan Dots) -->
+    <rect x="94" y="130" width="3" height="3" fill="#FCEE0A" opacity="0.85" />
+    <rect x="104" y="130" width="3" height="3" fill="#00F0FF" opacity="0.7" />
+    <rect x="94" y="145" width="3" height="3" fill="#00F0FF" opacity="0.8" />
+    <rect x="140" y="155" width="3" height="3" fill="#FCEE0A" opacity="0.9" />
+    <rect x="140" y="170" width="3" height="3" fill="#00F0FF" opacity="0.75" />
 
-  <!-- Animated Glowing Horizontal Light Streak -->
-  <g class="animated-streak" opacity="0.6">
-    <rect x="0" y="193" width="360" height="3" rx="1.5" fill="url(#yellowStreak)" filter="url(#cyanGlow)" />
+    <!-- Left Mid Structure 2 (Chamfered Top Tower) -->
+    <polygon points="215,200 215,115 240,90 280,90 305,115 305,200" fill="url(#towerGradMid)" stroke="#7B2FF7" stroke-width="1" stroke-opacity="0.45" />
+    <line x1="260" y1="90" x2="260" y2="198" stroke="#7B2FF7" stroke-width="1.2" stroke-opacity="0.6" />
+    <rect x="235" y="125" width="3" height="3" fill="#00F0FF" opacity="0.85" />
+    <rect x="245" y="125" width="3" height="3" fill="#FCEE0A" opacity="0.9" />
+    <rect x="275" y="140" width="3" height="3" fill="#00F0FF" opacity="0.75" />
+    <rect x="235" y="160" width="3" height="3" fill="#FCEE0A" opacity="0.8" />
+    <line x1="260" y1="90" x2="260" y2="65" stroke="#00F0FF" stroke-width="1.2" stroke-opacity="0.8" />
+    <circle cx="260" cy="63" r="2" fill="#00F0FF" class="beacon-1" />
+
+    <!-- Right Mid Structure 1 (Chamfered Top Tower) -->
+    <polygon points="975,200 975,115 1000,90 1040,90 1065,115 1065,200" fill="url(#towerGradMid)" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.45" />
+    <line x1="1020" y1="90" x2="1020" y2="198" stroke="#00F0FF" stroke-width="1.2" stroke-opacity="0.6" />
+    <rect x="995" y="125" width="3" height="3" fill="#FCEE0A" opacity="0.9" />
+    <rect x="1035" y="125" width="3" height="3" fill="#00F0FF" opacity="0.8" />
+    <rect x="995" y="150" width="3" height="3" fill="#00F0FF" opacity="0.75" />
+    <rect x="1035" y="165" width="3" height="3" fill="#FCEE0A" opacity="0.85" />
+    <line x1="1020" y1="90" x2="1020" y2="65" stroke="#FCEE0A" stroke-width="1.2" stroke-opacity="0.8" />
+    <circle cx="1020" cy="63" r="2" fill="#FCEE0A" class="beacon-2" />
+
+    <!-- Right Mid Structure 2 -->
+    <polygon points="1115,200 1115,125 1130,110 1180,110 1200,130 1200,200" fill="url(#towerGradMid)" stroke="#7B2FF7" stroke-width="1" stroke-opacity="0.4" />
+    <line x1="1155" y1="110" x2="1155" y2="198" stroke="#7B2FF7" stroke-width="1.2" stroke-opacity="0.55" />
+    <rect x="1135" y="135" width="3" height="3" fill="#00F0FF" opacity="0.8" />
+    <rect x="1170" y="145" width="3" height="3" fill="#FCEE0A" opacity="0.85" />
+    <rect x="1135" y="165" width="3" height="3" fill="#00F0FF" opacity="0.75" />
   </g>
 
-  <!-- ================= ANGULAR CYBERPUNK BORDER & HUD BRACKETS ================= -->
-  <!-- Outer Chamfered / Slanted Cyberpunk Frame (Sharp Cut Corners) -->
+  <!-- Layer 3: Foreground Angular Monoliths (Lower Flanks, Leaving Centre Wide Open) -->
+  <g>
+    <!-- Left Foreground Edge Monolith -->
+    <polygon points="20,200 20,150 40,130 70,130 90,150 90,200" fill="url(#towerGradNear)" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="40" y1="130" x2="40" y2="198" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.8" filter="url(#neonBlur)" />
+
+    <!-- Right Foreground Edge Monolith -->
+    <polygon points="1190,200 1190,150 1210,130 1240,130 1260,150 1260,200" fill="url(#towerGradNear)" stroke="#7B2FF7" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="1240" y1="130" x2="1240" y2="198" stroke="#7B2FF7" stroke-width="1.5" stroke-opacity="0.8" filter="url(#neonBlur)" />
+  </g>
+
+  <!-- ================= FLOATING DRIFTING CYBER PARTICLES ================= -->
+  <g class="particle-group-1">
+    <circle cx="210" cy="75" r="1.5" fill="#00F0FF" filter="url(#neonBlur)" />
+    <circle cx="340" cy="115" r="1.2" fill="#FCEE0A" />
+    <circle cx="490" cy="85" r="1.8" fill="#00F0FF" filter="url(#neonBlur)" />
+    <circle cx="610" cy="65" r="1.5" fill="#7B2FF7" />
+    <circle cx="780" cy="95" r="1.4" fill="#FCEE0A" />
+    <circle cx="910" cy="70" r="1.6" fill="#00F0FF" filter="url(#neonBlur)" />
+    <circle cx="1080" cy="110" r="1.2" fill="#7B2FF7" />
+  </g>
+
+  <g class="particle-group-2">
+    <circle cx="160" cy="130" r="1.2" fill="#7B2FF7" />
+    <circle cx="290" cy="60" r="1.6" fill="#00F0FF" />
+    <circle cx="430" cy="140" r="1.4" fill="#FCEE0A" />
+    <circle cx="560" cy="110" r="2.0" fill="#00F0FF" filter="url(#neonBlur)" />
+    <circle cx="680" cy="75" r="1.5" fill="#FCEE0A" />
+    <circle cx="740" cy="135" r="1.8" fill="#00F0FF" filter="url(#neonBlur)" />
+    <circle cx="860" cy="120" r="1.3" fill="#7B2FF7" />
+    <circle cx="1140" cy="80" r="1.5" fill="#00F0FF" />
+  </g>
+
+  <!-- ================= HORIZON GLOW & LIGHT ENERGY ================= -->
+  <!-- Wide Radiant Horizon Haze in the Open Centre -->
+  <rect x="0" y="80" width="1280" height="240" fill="url(#horizonGlow)" class="pulse-layer" />
+
+  <!-- Laser Horizon Dividing Line with Glowing Center Accent -->
+  <line x1="30" y1="198" x2="1250" y2="198" stroke="url(#laserBeam)" stroke-width="2.2" filter="url(#neonBlur)" />
+
+  <!-- Center Diamond Horizon Pivot -->
+  <polygon points="640,192 646,198 640,204 634,198" fill="#FCEE0A" filter="url(#neonBlur)" />
+  <circle cx="640" cy="198" r="1.5" fill="#FFFFFF" />
+
+  <!-- Animated High-Speed Moving Light Streak Along Horizon -->
+  <g class="streak-anim" opacity="0.8">
+    <rect x="0" y="196" width="340" height="3" rx="1.5" fill="url(#movingStreakGrad)" filter="url(#neonBlur)" />
+  </g>
+
+  <!-- ================= 3D PERSPECTIVE NEON GRID FLOOR ================= -->
+  <g>
+    <!-- Horizontal Perspective Lines (Increasing Frequency & Progressive Width Toward Viewer) -->
+    <line x1="0" y1="205" x2="1280" y2="205" stroke="url(#gridVGrad)" stroke-width="0.8" />
+    <line x1="0" y1="214" x2="1280" y2="214" stroke="url(#gridVGrad)" stroke-width="0.9" />
+    <line x1="0" y1="225" x2="1280" y2="225" stroke="url(#gridVGrad)" stroke-width="1.0" />
+    <line x1="0" y1="239" x2="1280" y2="239" stroke="url(#gridVGrad)" stroke-width="1.2" />
+    <line x1="0" y1="256" x2="1280" y2="256" stroke="url(#gridVGrad)" stroke-width="1.4" />
+    <line x1="0" y1="278" x2="1280" y2="278" stroke="url(#gridVioletGrad)" stroke-width="1.6" />
+    <line x1="0" y1="305" x2="1280" y2="305" stroke="url(#gridVioletGrad)" stroke-width="2.0" />
+
+    <!-- Perspective Rays Receding to Horizon Center Vanishing Point (640, 198) -->
+    <line x1="640" y1="198" x2="640" y2="320" stroke="url(#gridVioletGrad)" stroke-width="1.6" filter="url(#neonBlur)" />
+    <line x1="640" y1="198" x2="540" y2="320" stroke="url(#gridVGrad)" stroke-width="1.3" />
+    <line x1="640" y1="198" x2="740" y2="320" stroke="url(#gridVGrad)" stroke-width="1.3" />
+    <line x1="640" y1="198" x2="420" y2="320" stroke="url(#gridVGrad)" stroke-width="1.3" />
+    <line x1="640" y1="198" x2="860" y2="320" stroke="url(#gridVGrad)" stroke-width="1.3" />
+    <line x1="640" y1="198" x2="280" y2="320" stroke="url(#gridVioletGrad)" stroke-width="1.4" />
+    <line x1="640" y1="198" x2="1000" y2="320" stroke="url(#gridVioletGrad)" stroke-width="1.4" />
+    <line x1="640" y1="198" x2="120" y2="320" stroke="url(#gridVGrad)" stroke-width="1.5" />
+    <line x1="640" y1="198" x2="1160" y2="320" stroke="url(#gridVGrad)" stroke-width="1.5" />
+    <line x1="640" y1="198" x2="-60" y2="320" stroke="url(#gridVGrad)" stroke-width="1.5" />
+    <line x1="640" y1="198" x2="1340" y2="320" stroke="url(#gridVGrad)" stroke-width="1.5" />
+    <line x1="640" y1="198" x2="-260" y2="320" stroke="url(#gridVioletGrad)" stroke-width="1.5" />
+    <line x1="640" y1="198" x2="1540" y2="320" stroke="url(#gridVioletGrad)" stroke-width="1.5" />
+  </g>
+
+  <!-- Center Floor Ambient Focus Pool -->
+  <ellipse cx="640" cy="245" rx="220" ry="25" fill="#00F0FF" fill-opacity="0.12" filter="url(#wideHaze)" />
+
+  <!-- ================= ANGULAR CUT-CORNER CYBER FRAME & CIRCUIT TRACES ================= -->
+  <!-- Outer Chamfered Neon Border (Sharp Cut Corners) -->
   <polygon points="
-    28,14 1252,14 1266,28 1266,292 1252,306 28,306 14,292 14,28
-  " fill="none" stroke="#7B2FF7" stroke-width="1.5" stroke-opacity="0.38" />
+    28,12 1252,12 1268,28 1268,292 1252,308 28,308 12,292 12,28
+  " fill="none" stroke="#7B2FF7" stroke-width="1.6" stroke-opacity="0.45" />
 
-  <!-- Inner High-Tech Chamfered Accent -->
+  <!-- Inner High-Tech Chamfered Offset Stroke -->
   <polygon points="
-    34,20 1246,20 1260,34 1260,286 1246,300 34,300 20,286 20,34
-  " fill="none" stroke="#00F0FF" stroke-width="0.75" stroke-opacity="0.22" />
+    34,18 1246,18 1262,34 1262,286 1246,302 34,302 18,286 18,34
+  " fill="none" stroke="#00F0FF" stroke-width="0.8" stroke-opacity="0.3" />
 
-  <!-- HUD Corner Brackets - Top Left -->
-  <path d="M 14,64 L 14,28 L 28,14 L 84,14" fill="none" stroke="#00F0FF" stroke-width="2.5" />
-  <line x1="84" y1="14" x2="96" y2="26" stroke="#00F0FF" stroke-width="1.5" />
-  <line x1="96" y1="26" x2="180" y2="26" stroke="#00F0FF" stroke-width="1" stroke-dasharray="3,3" />
-  <circle cx="184" cy="26" r="2.5" fill="#FCEE0A" />
+  <!-- Top-Left Corner Geometric Circuit Accent -->
+  <path d="M 12,65 L 12,28 L 28,12 L 80,12 L 95,27 L 160,27" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <circle cx="160" cy="27" r="2.5" fill="#FCEE0A" />
+  <rect x="50" y="10" width="12" height="4" fill="#7B2FF7" />
 
-  <!-- HUD Corner Brackets - Top Right -->
-  <path d="M 1266,64 L 1266,28 L 1252,14 L 1196,14" fill="none" stroke="#7B2FF7" stroke-width="2.5" />
-  <line x1="1196" y1="14" x2="1184" y2="26" stroke="#7B2FF7" stroke-width="1.5" />
-  <line x1="1184" y1="26" x2="1100" y2="26" stroke="#7B2FF7" stroke-width="1" stroke-dasharray="3,3" />
-  <circle cx="1096" cy="26" r="2.5" fill="#00F0FF" />
+  <!-- Top-Right Corner Geometric Circuit Accent -->
+  <path d="M 1268,65 L 1268,28 L 1252,12 L 1200,12 L 1185,27 L 1120,27" fill="none" stroke="#7B2FF7" stroke-width="2" />
+  <circle cx="1120" cy="27" r="2.5" fill="#00F0FF" />
+  <rect x="1218" y="10" width="12" height="4" fill="#FCEE0A" />
 
-  <!-- HUD Corner Brackets - Bottom Left -->
-  <path d="M 14,256 L 14,292 L 28,306 L 84,306" fill="none" stroke="#7B2FF7" stroke-width="2.5" />
-  <rect x="22" y="280" width="3" height="12" fill="#FCEE0A" />
+  <!-- Bottom-Left Corner Geometric Circuit Accent -->
+  <path d="M 12,255 L 12,292 L 28,308 L 80,308 L 95,293 L 140,293" fill="none" stroke="#7B2FF7" stroke-width="2" />
+  <circle cx="140" cy="293" r="2.5" fill="#00F0FF" />
+  <rect x="22" y="278" width="3" height="14" fill="#FCEE0A" />
 
-  <!-- HUD Corner Brackets - Bottom Right -->
-  <path d="M 1266,256 L 1266,292 L 1252,306 L 1196,306" fill="none" stroke="#00F0FF" stroke-width="2.5" />
-  <rect x="1255" y="280" width="3" height="12" fill="#00F0FF" />
+  <!-- Bottom-Right Corner Geometric Circuit Accent -->
+  <path d="M 1268,255 L 1268,292 L 1252,308 L 1200,308 L 1185,293 L 1140,293" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <circle cx="1140" cy="293" r="2.5" fill="#FCEE0A" />
+  <rect x="1255" y="278" width="3" height="14" fill="#00F0FF" />
 
-  <!-- Top Metadata & Telemetry Readouts -->
-  <g class="font-mono" font-size="10.5" font-weight="600" letter-spacing="1.5px">
-    <!-- Top Left Status -->
-    <circle cx="44" cy="36" r="3.5" fill="#00F0FF" class="animated-beacon" />
-    <text x="56" y="39.5" fill="#00F0FF" opacity="0.9">SYS.KERNEL // AIRIL-OS [v2.4]</text>
+  <!-- Subtle Midpoint Edge Ticks (Pure Geometry) -->
+  <polygon points="636,12 640,8 644,12" fill="#00F0FF" opacity="0.75" />
+  <polygon points="636,308 640,312 644,308" fill="#7B2FF7" opacity="0.75" />
+  <polygon points="12,160 8,164 12,168" fill="#FCEE0A" opacity="0.75" />
+  <polygon points="1268,160 1272,164 1268,168" fill="#00F0FF" opacity="0.75" />
 
-    <!-- Top Right Telemetry -->
-    <text x="1234" y="39.5" text-anchor="end" fill="#7B2FF7" opacity="0.95">
-      <tspan fill="#FCEE0A">SEC:</tspan> VERIFIED_WORK <tspan fill="#00F0FF">|</tspan> LOC: AMPANG, MY
-    </text>
-  </g>
-
-  <!-- Circuit Trace Nodes (Left & Right Flanks) -->
-  <g opacity="0.45">
-    <!-- Left Circuit Node -->
-    <path d="M 40,110 L 80,110 L 105,135 L 140,135" fill="none" stroke="#00F0FF" stroke-width="1" />
-    <circle cx="140" cy="135" r="2.5" fill="#00F0FF" />
-    <rect x="76" y="108" width="8" height="4" fill="#7B2FF7" />
-
-    <!-- Right Circuit Node -->
-    <path d="M 1240,110 L 1200,110 L 1175,135 L 1140,135" fill="none" stroke="#7B2FF7" stroke-width="1" />
-    <circle cx="1140" cy="135" r="2.5" fill="#7B2FF7" />
-    <rect x="1196" y="108" width="8" height="4" fill="#FCEE0A" />
-  </g>
-
-  <!-- ================= CENTER HEADLINE CONTENT ================= -->
-  <!-- Dark Backdrop Shield (Guarantees 100% Crisp Legibility over Grid & Effects) -->
-  <rect x="180" y="58" width="920" height="186" rx="10" fill="#070B14" fill-opacity="0.82" stroke="#00F0FF" stroke-opacity="0.12" stroke-width="1" />
-
-  <!-- Subtle Corner Ticks on Content Box -->
-  <path d="M 180,74 L 180,58 L 196,58" fill="none" stroke="#00F0FF" stroke-width="2" />
-  <path d="M 1100,74 L 1100,58 L 1084,58" fill="none" stroke="#7B2FF7" stroke-width="2" />
-  <path d="M 180,228 L 180,244 L 196,244" fill="none" stroke="#7B2FF7" stroke-width="2" />
-  <path d="M 1100,228 L 1100,244 L 1084,244" fill="none" stroke="#00F0FF" stroke-width="2" />
-
-  <!-- Main Headline Group -->
-  <g text-anchor="middle" class="animated-flicker">
-    <!-- Top Cyberpunk Accent Marker -->
-    <g class="font-mono" font-size="11.5" font-weight="700" letter-spacing="3.5px">
-      <text x="640" y="86" fill="#FCEE0A">
-        <tspan fill="#00F0FF">[</tspan> // DEVELOPER ARCHITECTURE &amp; CLOUD SYSTEMS <tspan fill="#00F0FF">]</tspan>
-      </text>
-    </g>
-
-    <!-- PRIMARY NAME: Airil Asyraff Zulkifli -->
-    <text x="640" y="142"
-          class="font-sans animated-glow"
-          font-size="44"
-          font-weight="900"
-          letter-spacing="1.8px"
-          fill="#FFFFFF"
-          filter="url(#titleGlow)">
-      Airil Asyraff Zulkifli
-    </text>
-
-    <!-- Electric Cyan Underline Accent with Diamond Pivot -->
-    <line x1="390" y1="156" x2="630" y2="156" stroke="#00F0FF" stroke-width="2" filter="url(#cyanGlow)" />
-    <polygon points="640,152 644,156 640,160 636,156" fill="#FCEE0A" />
-    <line x1="650" y1="156" x2="890" y2="156" stroke="#7B2FF7" stroke-width="2" />
-
-    <!-- SUB-HEADLINE: Software Developer / Cloud Practitioner -->
-    <text x="640" y="190"
-          class="font-mono"
-          font-size="19"
-          font-weight="700"
-          letter-spacing="3px"
-          fill="#00F0FF">
-      SOFTWARE DEVELOPER <tspan fill="#7B2FF7">/</tspan> CLOUD PRACTITIONER
-    </text>
-
-    <!-- MONOSPACE TAGLINE: > full stack | cloud | system utilities -->
-    <g class="font-mono" font-size="13.5" font-weight="600" letter-spacing="2.2px">
-      <text x="640" y="224" fill="#E2E8F0">
-        <tspan fill="#FCEE0A" font-weight="800">&gt;</tspan> full stack <tspan fill="#7B2FF7">|</tspan> cloud <tspan fill="#7B2FF7">|</tspan> system utilities
-      </text>
-    </g>
-  </g>
-
-  <!-- Bottom Terminal Decorative Ticker / Prompt Bar -->
-  <g class="font-mono" font-size="10" font-weight="500" letter-spacing="1px" opacity="0.8">
-    <text x="44" y="288" fill="#64748B">
-      <tspan fill="#00F0FF">&gt;&gt;</tspan> STACK: C# / REACT 19 / FASTAPI / AWS / FIREBASE / PWA
-    </text>
-    <text x="1234" y="288" text-anchor="end" fill="#64748B">
-      <tspan fill="#FCEE0A">STATUS:</tspan> OPEN_TO_INTERNSHIPS (2026) <tspan fill="#00F0FF">●</tspan>
-    </text>
-  </g>
-
-  <!-- SUBTLE SCANLINE OVERLAY -->
-  <rect width="1280" height="320" fill="url(#scanlines)" pointer-events="none" />
+  <!-- SUBTLE OVERLAY SCANLINES -->
+  <rect width="1280" height="320" fill="url(#subtleScanlines)" pointer-events="none" />
 </svg>
