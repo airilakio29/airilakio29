@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="100%" height="100%">
+  <defs>
+    <!-- Dark Navy Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05080F" />
+      <stop offset="40%" stop-color="#070B14" />
+      <stop offset="80%" stop-color="#0B1020" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0.22" />
+      <stop offset="45%" stop-color="#00F0FF" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Neon Light Streaks Gradients -->
+    <linearGradient id="cyanStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="30%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#7B2FF7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="yellowStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCEE0A" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FCEE0A" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Grid Floor Perspective Fade -->
+    <linearGradient id="gridFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="35%" stop-color="#00F0FF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.32" />
+    </linearGradient>
+
+    <linearGradient id="violetGridFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B2FF7" stop-opacity="0" />
+      <stop offset="40%" stop-color="#7B2FF7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#7B2FF7" stop-opacity="0.35" />
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+
+    <!-- Fine Tech Matrix Grid Pattern -->
+    <pattern id="techGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.07" />
+    </pattern>
+
+    <!-- Filters for Neon Glow -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="titleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      <![CDATA[
+      /* Font and Typography Settings */
+      .font-mono {
+        font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      .font-sans {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      /* Glow & Pulse Animation */
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.45)); }
+        50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 24px rgba(123, 47, 247, 0.5)); }
+      }
+
+      /* Subtle Cyberpunk Flicker */
+      @keyframes text-flicker {
+        0%, 93%, 95%, 100% { opacity: 1; }
+        94% { opacity: 0.82; transform: skewX(0.4deg); }
+        97% { opacity: 0.92; }
+      }
+
+      /* Moving Horizontal Light Beam */
+      @keyframes streak-slide {
+        0% { transform: translateX(-1280px); }
+        100% { transform: translateX(1280px); }
+      }
+
+      /* Beacon Blinking */
+      @keyframes beacon {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+
+      .animated-glow {
+        animation: pulse-glow 4s ease-in-out infinite;
+      }
+
+      .animated-flicker {
+        animation: text-flicker 7s infinite;
+      }
+
+      .animated-streak {
+        animation: streak-slide 6s linear infinite;
+      }
+
+      .animated-beacon {
+        animation: beacon 2s infinite ease-in-out;
+      }
+
+      /* Accessibility: Prefers Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        .animated-glow,
+        .animated-flicker,
+        .animated-streak,
+        .animated-beacon {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- SOLID NAVY BACKGROUND -->
+  <rect width="1280" height="320" fill="url(#bgGrad)" />
+
+  <!-- Center Radial Glow -->
+  <rect width="1280" height="320" fill="url(#centerGlow)" />
+
+  <!-- Fine Tech Grid Texture -->
+  <rect width="1280" height="320" fill="url(#techGrid)" />
+
+  <!-- ================= PERSPECTIVE 3D NEON GRID FLOOR ================= -->
+  <g opacity="0.85">
+    <!-- Horizontal Perspective Lines (Progressive Spacing) -->
+    <line x1="0" y1="210" x2="1280" y2="210" stroke="url(#gridFade)" stroke-width="0.75" />
+    <line x1="0" y1="225" x2="1280" y2="225" stroke="url(#gridFade)" stroke-width="0.9" />
+    <line x1="0" y1="244" x2="1280" y2="244" stroke="url(#gridFade)" stroke-width="1.1" />
+    <line x1="0" y1="268" x2="1280" y2="268" stroke="url(#gridFade)" stroke-width="1.3" />
+    <line x1="0" y1="298" x2="1280" y2="298" stroke="url(#gridFade)" stroke-width="1.6" />
+
+    <!-- Receding Perspective Vertical / Slanted Lines -->
+    <!-- Horizon Center: (640, 195) -->
+    <line x1="640" y1="195" x2="640" y2="320" stroke="url(#violetGridFade)" stroke-width="1.4" />
+    <line x1="640" y1="195" x2="520" y2="320" stroke="url(#gridFade)" stroke-width="1.1" />
+    <line x1="640" y1="195" x2="760" y2="320" stroke="url(#gridFade)" stroke-width="1.1" />
+    <line x1="640" y1="195" x2="380" y2="320" stroke="url(#gridFade)" stroke-width="1.2" />
+    <line x1="640" y1="195" x2="900" y2="320" stroke="url(#gridFade)" stroke-width="1.2" />
+    <line x1="640" y1="195" x2="220" y2="320" stroke="url(#violetGridFade)" stroke-width="1.3" />
+    <line x1="640" y1="195" x2="1060" y2="320" stroke="url(#violetGridFade)" stroke-width="1.3" />
+    <line x1="640" y1="195" x2="40" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
+    <line x1="640" y1="195" x2="1240" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
+    <line x1="640" y1="195" x2="-160" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
+    <line x1="640" y1="195" x2="1440" y2="320" stroke="url(#gridFade)" stroke-width="1.4" />
+  </g>
+
+  <!-- Horizon Neon Laser Divider Line -->
+  <line x1="40" y1="195" x2="1240" y2="195" stroke="url(#cyanStreak)" stroke-width="1.8" filter="url(#cyanGlow)" />
+  <circle cx="640" cy="195" r="3" fill="#00F0FF" />
+
+  <!-- Animated Glowing Horizontal Light Streak -->
+  <g class="animated-streak" opacity="0.6">
+    <rect x="0" y="193" width="360" height="3" rx="1.5" fill="url(#yellowStreak)" filter="url(#cyanGlow)" />
+  </g>
+
+  <!-- ================= ANGULAR CYBERPUNK BORDER & HUD BRACKETS ================= -->
+  <!-- Outer Chamfered / Slanted Cyberpunk Frame (Sharp Cut Corners) -->
+  <polygon points="
+    28,14 1252,14 1266,28 1266,292 1252,306 28,306 14,292 14,28
+  " fill="none" stroke="#7B2FF7" stroke-width="1.5" stroke-opacity="0.38" />
+
+  <!-- Inner High-Tech Chamfered Accent -->
+  <polygon points="
+    34,20 1246,20 1260,34 1260,286 1246,300 34,300 20,286 20,34
+  " fill="none" stroke="#00F0FF" stroke-width="0.75" stroke-opacity="0.22" />
+
+  <!-- HUD Corner Brackets - Top Left -->
+  <path d="M 14,64 L 14,28 L 28,14 L 84,14" fill="none" stroke="#00F0FF" stroke-width="2.5" />
+  <line x1="84" y1="14" x2="96" y2="26" stroke="#00F0FF" stroke-width="1.5" />
+  <line x1="96" y1="26" x2="180" y2="26" stroke="#00F0FF" stroke-width="1" stroke-dasharray="3,3" />
+  <circle cx="184" cy="26" r="2.5" fill="#FCEE0A" />
+
+  <!-- HUD Corner Brackets - Top Right -->
+  <path d="M 1266,64 L 1266,28 L 1252,14 L 1196,14" fill="none" stroke="#7B2FF7" stroke-width="2.5" />
+  <line x1="1196" y1="14" x2="1184" y2="26" stroke="#7B2FF7" stroke-width="1.5" />
+  <line x1="1184" y1="26" x2="1100" y2="26" stroke="#7B2FF7" stroke-width="1" stroke-dasharray="3,3" />
+  <circle cx="1096" cy="26" r="2.5" fill="#00F0FF" />
+
+  <!-- HUD Corner Brackets - Bottom Left -->
+  <path d="M 14,256 L 14,292 L 28,306 L 84,306" fill="none" stroke="#7B2FF7" stroke-width="2.5" />
+  <rect x="22" y="280" width="3" height="12" fill="#FCEE0A" />
+
+  <!-- HUD Corner Brackets - Bottom Right -->
+  <path d="M 1266,256 L 1266,292 L 1252,306 L 1196,306" fill="none" stroke="#00F0FF" stroke-width="2.5" />
+  <rect x="1255" y="280" width="3" height="12" fill="#00F0FF" />
+
+  <!-- Top Metadata & Telemetry Readouts -->
+  <g class="font-mono" font-size="10.5" font-weight="600" letter-spacing="1.5px">
+    <!-- Top Left Status -->
+    <circle cx="44" cy="36" r="3.5" fill="#00F0FF" class="animated-beacon" />
+    <text x="56" y="39.5" fill="#00F0FF" opacity="0.9">SYS.KERNEL // AIRIL-OS [v2.4]</text>
+
+    <!-- Top Right Telemetry -->
+    <text x="1234" y="39.5" text-anchor="end" fill="#7B2FF7" opacity="0.95">
+      <tspan fill="#FCEE0A">SEC:</tspan> VERIFIED_WORK <tspan fill="#00F0FF">|</tspan> LOC: AMPANG, MY
+    </text>
+  </g>
+
+  <!-- Circuit Trace Nodes (Left & Right Flanks) -->
+  <g opacity="0.45">
+    <!-- Left Circuit Node -->
+    <path d="M 40,110 L 80,110 L 105,135 L 140,135" fill="none" stroke="#00F0FF" stroke-width="1" />
+    <circle cx="140" cy="135" r="2.5" fill="#00F0FF" />
+    <rect x="76" y="108" width="8" height="4" fill="#7B2FF7" />
+
+    <!-- Right Circuit Node -->
+    <path d="M 1240,110 L 1200,110 L 1175,135 L 1140,135" fill="none" stroke="#7B2FF7" stroke-width="1" />
+    <circle cx="1140" cy="135" r="2.5" fill="#7B2FF7" />
+    <rect x="1196" y="108" width="8" height="4" fill="#FCEE0A" />
+  </g>
+
+  <!-- ================= CENTER HEADLINE CONTENT ================= -->
+  <!-- Dark Backdrop Shield (Guarantees 100% Crisp Legibility over Grid & Effects) -->
+  <rect x="180" y="58" width="920" height="186" rx="10" fill="#070B14" fill-opacity="0.82" stroke="#00F0FF" stroke-opacity="0.12" stroke-width="1" />
+
+  <!-- Subtle Corner Ticks on Content Box -->
+  <path d="M 180,74 L 180,58 L 196,58" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 1100,74 L 1100,58 L 1084,58" fill="none" stroke="#7B2FF7" stroke-width="2" />
+  <path d="M 180,228 L 180,244 L 196,244" fill="none" stroke="#7B2FF7" stroke-width="2" />
+  <path d="M 1100,228 L 1100,244 L 1084,244" fill="none" stroke="#00F0FF" stroke-width="2" />
+
+  <!-- Main Headline Group -->
+  <g text-anchor="middle" class="animated-flicker">
+    <!-- Top Cyberpunk Accent Marker -->
+    <g class="font-mono" font-size="11.5" font-weight="700" letter-spacing="3.5px">
+      <text x="640" y="86" fill="#FCEE0A">
+        <tspan fill="#00F0FF">[</tspan> // DEVELOPER ARCHITECTURE &amp; CLOUD SYSTEMS <tspan fill="#00F0FF">]</tspan>
+      </text>
+    </g>
+
+    <!-- PRIMARY NAME: Airil Asyraff Zulkifli -->
+    <text x="640" y="142"
+          class="font-sans animated-glow"
+          font-size="44"
+          font-weight="900"
+          letter-spacing="1.8px"
+          fill="#FFFFFF"
+          filter="url(#titleGlow)">
+      Airil Asyraff Zulkifli
+    </text>
+
+    <!-- Electric Cyan Underline Accent with Diamond Pivot -->
+    <line x1="390" y1="156" x2="630" y2="156" stroke="#00F0FF" stroke-width="2" filter="url(#cyanGlow)" />
+    <polygon points="640,152 644,156 640,160 636,156" fill="#FCEE0A" />
+    <line x1="650" y1="156" x2="890" y2="156" stroke="#7B2FF7" stroke-width="2" />
+
+    <!-- SUB-HEADLINE: Software Developer / Cloud Practitioner -->
+    <text x="640" y="190"
+          class="font-mono"
+          font-size="19"
+          font-weight="700"
+          letter-spacing="3px"
+          fill="#00F0FF">
+      SOFTWARE DEVELOPER <tspan fill="#7B2FF7">/</tspan> CLOUD PRACTITIONER
+    </text>
+
+    <!-- MONOSPACE TAGLINE: > full stack | cloud | system utilities -->
+    <g class="font-mono" font-size="13.5" font-weight="600" letter-spacing="2.2px">
+      <text x="640" y="224" fill="#E2E8F0">
+        <tspan fill="#FCEE0A" font-weight="800">&gt;</tspan> full stack <tspan fill="#7B2FF7">|</tspan> cloud <tspan fill="#7B2FF7">|</tspan> system utilities
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Decorative Ticker / Prompt Bar -->
+  <g class="font-mono" font-size="10" font-weight="500" letter-spacing="1px" opacity="0.8">
+    <text x="44" y="288" fill="#64748B">
+      <tspan fill="#00F0FF">&gt;&gt;</tspan> STACK: C# / REACT 19 / FASTAPI / AWS / FIREBASE / PWA
+    </text>
+    <text x="1234" y="288" text-anchor="end" fill="#64748B">
+      <tspan fill="#FCEE0A">STATUS:</tspan> OPEN_TO_INTERNSHIPS (2026) <tspan fill="#00F0FF">●</tspan>
+    </text>
+  </g>
+
+  <!-- SUBTLE SCANLINE OVERLAY -->
+  <rect width="1280" height="320" fill="url(#scanlines)" pointer-events="none" />
+</svg>

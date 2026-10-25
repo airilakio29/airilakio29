@@ -1,6 +1,16 @@
 <div align="center">
 
-![Airil Asyraff Zulkifli Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:D97706,40:F59E0B,80:FBBF24,100:FEF08A&height=180&section=header)
+<img src="assets/banner.svg" alt="Airil Asyraff Zulkifli - Software Developer / Cloud Practitioner" width="100%" />
+
+<br/><br/>
+
+[![Portfolio](assets/badge-portfolio.svg)](https://portfolio-airil.vercel.app)
+&nbsp;
+[![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/airil-asyraff-zulkifli-50b810328)
+&nbsp;
+[![Email](assets/badge-email.svg)](mailto:airil_25009515@utp.edu.my)
+
+<br/><br/>
 
 <a href="https://github.com/airilakio29">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2600&pause=1200&color=FACC15&center=true&vCenter=true&repeat=true&width=620&height=45&lines=Airil+Asyraff+Zulkifli;Software+Developer+%7C+Cloud+Enthusiast;Seeking+Software+%26+Cloud+Internship" alt="Airil Asyraff Zulkifli - Software Developer | Cloud Enthusiast" />
@@ -9,9 +19,6 @@
 **Full-Stack Development · Cloud Fundamentals · System Utilities**
 
 Passionate about building resilient, user-centered web applications, cloud backends, and tactical software utilities.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/airil-asyraff-zulkifli-50b810328)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:airil_25009515@utp.edu.my)
 
 </div>
 
@@ -142,8 +149,10 @@ I am a 2nd-year **Information Technology** student at **Universiti Teknologi PET
 
 Interested in collaborating, hiring for an internship, or discussing cloud & software projects?
 
-[![Connect on LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/airil-asyraff-zulkifli-50b810328)
+[![Portfolio](assets/badge-portfolio.svg)](https://portfolio-airil.vercel.app)
 &nbsp;
-[![Send an Email](https://img.shields.io/badge/Send%20an%20Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:airil_25009515@utp.edu.my)
+[![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/airil-asyraff-zulkifli-50b810328)
+&nbsp;
+[![Email](assets/badge-email.svg)](mailto:airil_25009515@utp.edu.my)
 
 </div>
