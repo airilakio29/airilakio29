@@ -2,6 +2,14 @@
 
 <img src="assets/banner.svg" alt="Decorative cyberpunk banner" width="100%" />
 
+
+<a href="https://github.com/airilakio29">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2600&pause=1200&color=FACC15&center=true&vCenter=true&repeat=true&width=620&height=45&lines=Airil+Asyraff+Zulkifli;Software+Developer+%7C+Cloud+Enthusiast;Seeking+Software+%26+Cloud+Internship" alt="Airil Asyraff Zulkifli - Software Developer | Cloud Enthusiast" />
+</a>
+
+**Full-Stack Development · Cloud Fundamentals · System Utilities**
+
+Passionate about building resilient, user-centered web applications, cloud backends, and tactical software utilities.
 <br/><br/>
 
 [![Portfolio](assets/badge-portfolio.svg)](https://portfolio-airil.vercel.app)
@@ -12,13 +20,6 @@
 
 <br/><br/>
 
-<a href="https://github.com/airilakio29">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2600&pause=1200&color=FACC15&center=true&vCenter=true&repeat=true&width=620&height=45&lines=Airil+Asyraff+Zulkifli;Software+Developer+%7C+Cloud+Enthusiast;Seeking+Software+%26+Cloud+Internship" alt="Airil Asyraff Zulkifli - Software Developer | Cloud Enthusiast" />
-</a>
-
-**Full-Stack Development · Cloud Fundamentals · System Utilities**
-
-Passionate about building resilient, user-centered web applications, cloud backends, and tactical software utilities.
 
 </div>
 
